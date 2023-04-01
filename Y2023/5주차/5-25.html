@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>반응형웹 연습문제</title>
+        <style type="text/css">
+            .divgroup {margin-bottom: 3px;}
+            @media all and (max-width: 600px) {.divgroup {background-color: white;border: medium double;height: 120px;}}
+            @media all and (min-width: 600px) and (max-width: 1000px) {.divgroup {background-color: blue;width: 45%;float: left;margin: 3px;height: 120px;}}
+            @media all and (min-width: 1000px) {.divgroup {background-color: yellow;width: 30%; float: left;margin: 3px;height: 120px;}}
+        </style>
+    </head>
+    <body>
+        <div class="divgroup">1번 영역</div>
+        <div class="divgroup">2번 영역</div>
+        <div class="divgroup">3번 영역</div>
+        <div class="divgroup">4번 영역</div>
+        <div class="divgroup">5번 영역</div>
+    </body>
+</html>
