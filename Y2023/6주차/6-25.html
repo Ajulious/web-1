@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form 요소 - 회원가입</title>
+    </head>
+    <body>
+        <h3>레스토랑 예약하기</h3>
+        <P>
+            <form method="post" action="form_app.js">
+                <fieldset>
+                    <legend>예약자 정보</legend>
+                    예약자 : <input type="text" name="name"><br>
+                    연락처 : <input type="tel" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" name="phone number"/><br>
+                    예약인원 : <select name="Headcount" size="1">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="over 10">over 10</option>
+                              </select>
+                </fieldset>
+                <fieldset>
+                    <legend>일자 선택 및 시간 선택</legend>
+                    <input type="date"/>
+                    <input type="time"/>
+                </fieldset>
+                <p>
+                    <input type="submit" value="예약"/><!--예약 버튼-->
+                    <input type="reset" value="취소"/><!--취소 버튼-->
+               </p>
+            </form>
+        </P>
+    </body>
+</html>
