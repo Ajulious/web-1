@@ -47,6 +47,6 @@ article { margin:5px 0 10px 0; }
 
 .booklist .head { margin: 15px 0 0 10px; } 
 
-.booklist ul li { float: left; margin: 5px 5px 10px 5px; list-style-type: none; }
+.booklist ul li {  margin: 5px 5px 10px 5px; list-style-type: none; }
 
-.booklist2 ul li { float: left; margin: 5px 5px 10px 5px; list-style-type: none; }
+

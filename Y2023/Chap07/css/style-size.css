@@ -17,13 +17,13 @@ footer { height:70px; }
 
 #order table td, th{ width: 150px; height: 30px; }
 
-.booklist { height: 462px; }
+.booklist { height: 100px; }
 
-.booklist ul li { width: 150px; height: 180px; }
+.booklist ul li { width: 300px; height: 100px; }
 
 .musiclist ul li { width: 530px; }
 
-.booklist ul li img { height: 60px; }
+.booklist ul li img { height: 80px; }
 
 .booklist ul li audio, video { width: 330px; }
 

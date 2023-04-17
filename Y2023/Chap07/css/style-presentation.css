@@ -1,7 +1,7 @@
 /* 저자: 임순범 박희민 */
 /* 본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음 */
 
-body { background-color: gray; font-size: 0.75em; line-height: 1.2em; }
+body { background-color: white; font-size: 0.75em; line-height: 1.2em; }
 
 img { border:none; }
 
@@ -52,12 +52,17 @@ footer #SNS a { text-decoration: none; }
 
 .aerialview { background-image: url(./images/aerialview.jpg); }
 
-.booklist .head { font-size: 16px; font-weight: bolder; }
+.booklist .head { font-size: 16px; font-weight: bolder;}
 
-.booklist ul li { font-size: 12px; list-style-type: none; }
+.booklist ul li { font-size: 12px; list-style-type: none; position: relative; left: 70px;}
 
 .musiclist ul li { font-size: 12px; font-weight: bold;
     text-shadow: 0.2em 0.2em 0.2em white;
 }
 
-.booklist ul li img { border: solid; border-color: lightgray; border-width: 1px; }
+.booklist ul li img { border: solid; border-color: lightgray; border-width: 1px; position: absolute; left: -70px;}
+
+.booklist2 {background-color: antiquewhite;}
+ 
+.review {height: 120px; background-color: #ffc0cb;}
+
