@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>요일 번역</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+            var 월="월요일";
+            var 화="화요일";
+            var 수="수요일";
+            var 목="목요일";
+            var 금="금요일";
+            var 토="토요일";
+            var 일="일요일";
+            
+            var mon="Monday";
+            var tue="Tuesday";
+            var wed="Wednesday";
+            var thu="Thursday";
+            var fri="Friday";
+            var sat="Saturday";
+            var sun="Sunday";
+            
+            var choice=prompt("요일을 적으시오");
+
+            switch (choice){
+                case"월요일": 
+                    title=mon;break;
+                case"화요일": 
+                    title=tue;break;
+                case"수요일": 
+                    title=wed;break;
+                case"목요일": 
+                    title=thu;break;
+                case"금요일": 
+                    title=fri;break;
+                case"토요일": 
+                    title=sat;break;
+                case"일요일": 
+                    title=sun;break;
+                
+                case"Monday": 
+                    title=월;break;
+                case"Tuesday": 
+                    title=화;break;
+                case"Wednesday": 
+                    title=수;break;
+                case"Thursday": 
+                    title=목;break;
+                case"Friday": 
+                    title=금;break;
+                case"Saturday": 
+                    title=토;break;
+                case"Sunday": 
+                    title=일;break;
+                default:alert("없는 요일입니다.");
+                        title=";"
+            }
+
+            
+
+            document.write(title);
+        </script>
+    </body>
+</html>
