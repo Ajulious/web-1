@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>연산</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var num1=prompt("숫자를 입력하시오");
+            var 연산=prompt("연산기호를 입력하시오");
+            var num2=prompt("숫자를 입력하시오");
+
+            if (연산==="+")
+            result=parseInt(num1)+parseInt(num2);
+            else if(연산==="-")
+            result=parseInt(num1)-parseInt(num2);
+            else if(연산==="*")
+            result=parseInt(num1)*parseInt(num2);
+            else if(연산==="/")
+            result=parseInt(num1)/parseInt(num2);
+            else if(연산==="%")
+            result=parseInt(num1)%parseInt(num2);
+            else {alert("없는 연산 기호입니다.");
+            result="";
+            }
+            document.write(result);
+
+        </script>
+    </body>
+</html>
