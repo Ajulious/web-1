@@ -29,12 +29,18 @@
             var images = document.getElementsByTagName("img");
             var sec = 0;
 
-            function NextImage() {
-                if (sec < images.length) {
+             function NextImage() {
+                //if (sec < images.length) {
+                    sec = sec % images.length;
+                    secM1 = (sec-1) % images.length;
+                    console.log("sec=" + sec);
+                    console.log("secM1=" + secM1);
+                    if(secM1<0)secM1+=images.length;
+                    images[secM1].style.visibility = "hidden";
                     images[sec].style.visibility = "visible";
                     sec++;
                     setTimeout(NextImage, 1000);
-                }
+                //}
             }
 
             NextImage();
