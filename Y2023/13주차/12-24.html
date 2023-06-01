@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h3>현재 위치 지도</h3>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+
+    <script src=""></script> //카카오 키
+
+    <script type="text/javascript">
+        function getMyLocation(){
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(myCallback);
+                } 
+            }
+
+            function myCallback(myPosition){
+                var nlat = myPosition.coords.latitude;
+                var nlon = myPosition.coords.longitude;
+            }
+
+        var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(nlat,nlon),
+                level:5,
+            };
+        var map = kakao.maps.Map(mapContainer,mapOption)
+    </script>
+</body>
+</html>

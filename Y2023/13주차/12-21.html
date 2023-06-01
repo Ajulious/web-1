@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            img { display: inline-block; width: 7%; height: 10%;}
+        </style>
+    </head>
+    <body>
+        <h2>Drop Here</h2>
+        <div id="dropfield" style="border: solid 2px black; width: 50%; height: 40vh; display: inline-block;"></div>
+        <br>
+        <p id="name">파일 이름: </p>
+        <img id="banana" src="images/img1.jpeg"  draggable="true">
+        <img id="apple" src="images/img2.jpeg"  draggable="true">
+        <img id="mouse" src="images/img3.jpeg"  draggable="true">
+        
+        <script type="text/javascript">
+            var imgs = document.getElementsByTagName("img");
+            var dropfield = document.getElementById("dropfield");
+            var nameElement = document.getElementById("name");
+            
+            imgs[0].ondragstart = function (e) {
+                e.dataTransfer.setData("text", e.target.id);
+            }
+
+            imgs[1].ondragstart = function (e) {
+                e.dataTransfer.setData("text", e.target.id);
+            }
+
+            imgs[2].ondragstart = function (e) {
+                e.dataTransfer.setData("text", e.target.id);
+            }
+
+            dropfield.ondragover = function (e) {
+                e.preventDefault();
+            }
+
+            dropfield.ondrop = function (e){
+                e.preventDefault();
+                var file_name = e.dataTransfer.getData("text");
+                nameElement.innerText = "파일 이름 : " + file_name;
+            }
+        </script>
+    </body>
+</html>
