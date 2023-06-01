@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <button id="text"></button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="더하기" onclick="performCalculation('+')"/>
+        <input type="button" value="빼기" onclick="performCalculation('-')"/>
+        <input type="button" value="곱하기" onclick="performCalculation('*')"/>
+        <input type="button" value="나누기" onclick="performCalculation('/')"/>  
+    </form>
+    <script>
+        function performCalculation(operator) {
+            var number1 = parseInt(prompt("첫번째 숫자를 입력하시오"));
+            var number2 = parseInt(prompt("두번째 숫자를 입력하시오"));
+            var result ;
 
-        <script type="text/javascript">
-            var text = document.getElementById("text")
-            
-            var input = prompt("입력할 문자");
-            text.innerHTML = input;
-        </script>
-    </body>
+            switch (operator) {
+                case "+" :
+                    result = number1 + number2;
+                     break;
+                case "-" :
+                    result = number1 - number2;
+                    break;
+                case "*" :
+                    result = number1 * number2;
+                    break
+                case "/":
+                    result = number1 / numbuer2;
+            }
+            alert("결과:" + result);
+        }
+    </script>
+</body>
 </html>
