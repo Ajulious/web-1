@@ -9,23 +9,18 @@
         <div id="display"></div>
         <br>
         <div id="display2">거리 : </div>
-        <div id="test"></div>
 
         <script type="text/javascript">
-            var watchID, i=0;
+            var watchID;
             function startMyLocation(){
                 if (navigator.geolocation) {
                     watchID = navigator.geolocation.watchPosition(myCallback);
-                } else {
-                    alert("Geolocation 이 지원되지 않는다.");
                 }
             }
 
             function stopMyLocation(){
                 if(navigator.geolocation){
                     navigator.geolocation.clearWatch(watchID);
-                }else{
-                    alert("Geolocation 이 지원되지 않는다.");
                 }
             }
 
@@ -36,17 +31,9 @@
 
             function myCallback(myPosition){
                 if(set_location == true){
-                    document.getElementById("test").innerHTML += "true: 호출됨 <br>";
                     lat = lLat = myPosition.coords.latitude;
                     lon = lLon = myPosition.coords.longitude;
-                    set_location = false;
-                } else {
-                    document.getElementById("test").innerHTML += "false: 호출됨 <br>";
-                    lat = nLat = myPosition.coords.latitude;
-                    lon = nLon = myPosition.coords.longitude;
-                    calculateDistance(lLat, lLon, nLat, nLon);
-                    set_location = true;
-                }
+                } 
 
                 document.getElementById("display").innerHTML += "위치 정보 : 위도 : " + lat + "경도 : " + lon + "<br>";
 
