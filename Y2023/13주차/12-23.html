@@ -25,14 +25,14 @@
             }
 
             var set_location = true;
-            var lLat, lLon, nLat, nLon, lat, lon;
+            var nLat, nLon, lat, lon;
             var result = 0;
 
 
             function myCallback(myPosition){
                 if(set_location == true){
-                    lat = lLat = myPosition.coords.latitude;
-                    lon = lLon = myPosition.coords.longitude;
+                    lat = myPosition.coords.latitude;
+                    lon = myPosition.coords.longitude;
                 } 
 
                 document.getElementById("display").innerHTML += "위치 정보 : 위도 : " + lat + "경도 : " + lon + "<br>";
