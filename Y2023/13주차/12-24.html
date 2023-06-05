@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <h3>현재 위치 지도</h3>
-    <div id="map" style="width: 600px; height: 400px;"></div>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>현재 위치 지도</h3>
+        <div id="map" style="width: 600px; height: 400px;"></div>
+        <div id="display"></div>
 
-    <script src=""></script> //카카오 키
+        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=9b5f20ed9320523758c3a18334be0b3f"></script>
 
-    <script type="text/javascript">
-        function getMyLocation(){
+        <script type="text/javascript">
+            var nLat, nLon, mapOption, map;
+
             if (navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(myCallback);
-                } 
-            }
+            } else {
+                alert("Geolocation이 지원되지 않는 기기입니다.");
+            } 
 
             function myCallback(myPosition){
-                var nlat = myPosition.coords.latitude;
-                var nlon = myPosition.coords.longitude;
+                nLat = myPosition.coords.latitude;
+                nLon = myPosition.coords.longitude;
+                document.getElementById("display").innerHTML = "위치 정보 : 위도 : " + nLat + ", 경도 : " + nLon;
+
+                var mapContainer = document.getElementById('map');
+                var mapOption = {
+                    center: new kakao.maps.LatLng(nLat, nLon),
+                    level: 4,
+                };
+
+                map = new kakao.maps.Map(mapContainer, mapOption);
             }
 
-        var mapContainer = document.getElementById('map')
-        var mapOption = {
-                center: new kakao.maps.LatLng(nlat,nlon),
-                level:5,
-            };
-        var map = kakao.maps.Map(mapContainer,mapOption)
-    </script>
-</body>
+        </script>
+    </body>
 </html>
+
